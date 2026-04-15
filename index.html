@@ -9,14 +9,15 @@
 body {
     margin:0;
     font-family: Arial, sans-serif;
-    background:#0d1b2a;
+    background:#0a192f;
     color:white;
 }
 
+/* HERO */
 header {
     height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
-    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+    url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a');
     background-size:cover;
     background-position:center;
     display:flex;
@@ -27,53 +28,77 @@ header {
 }
 
 header h1 {
-    font-size:50px;
+    font-size:55px;
     margin:0;
+    letter-spacing:2px;
 }
 
 header p {
     font-size:20px;
-    color:#ccc;
+    color:#d1d5db;
 }
 
 .btn {
-    margin-top:20px;
-    padding:15px 30px;
-    background:#00b4d8;
-    color:white;
+    margin-top:25px;
+    padding:15px 35px;
+    background:#c8a96a;
+    color:black;
     text-decoration:none;
     border-radius:30px;
+    font-weight:bold;
 }
 
+/* SEZIONI */
 section {
-    padding:80px 20px;
+    padding:90px 20px;
+    max-width:1100px;
+    margin:auto;
     text-align:center;
 }
 
+h2 {
+    margin-bottom:30px;
+    font-size:28px;
+}
+
+/* CARDS */
 .services {
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:20px;
+    gap:25px;
 }
 
 .card {
-    background:#1b263b;
-    padding:20px;
-    border-radius:10px;
+    background:#112240;
+    padding:25px;
+    border-radius:12px;
     width:300px;
+    transition:0.3s;
+}
+
+.card:hover {
+    transform:translateY(-5px);
 }
 
 .card h3 {
-    margin-top:0;
+    color:#c8a96a;
 }
 
+/* NOTE */
 .note {
-    margin-top:20px;
-    color:#ccc;
+    margin-top:30px;
     font-size:14px;
+    color:#9ca3af;
 }
 
+/* CONTATTI */
+a {
+    color:#c8a96a;
+    text-decoration:none;
+}
+
+/* WHATSAPP */
 .whatsapp {
     position:fixed;
     bottom:20px;
@@ -82,7 +107,8 @@ section {
     color:white;
     padding:15px 20px;
     border-radius:50px;
-    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 0 10px rgba(0,0,0,0.4);
 }
 </style>
 
@@ -92,13 +118,13 @@ section {
 
 <header>
     <h1>Blu Srl Teak</h1>
-    <p>Fornitura di teak per yacht e cantieri nautici</p>
-    <a href="#contatti" class="btn">Contattaci</a>
+    <p>Teak selezionato per cantieri nautici e yacht di alta gamma</p>
+    <a href="#contatti" class="btn">Richiedi Fornitura</a>
 </header>
 
 <section>
-    <h2>Chi siamo</h2>
-    <p>Siamo fornitori specializzati in teak di alta qualità per cantieri nautici, yacht e professionisti del settore. Offriamo tavolame e doghe selezionate per decking nautico.</p>
+    <h2>Azienda</h2>
+    <p>Fornitori specializzati in teak di alta qualità per cantieri nautici e professionisti del settore. Selezioniamo e distribuiamo tavolame e doghe per decking nautico garantendo standard elevati e continuità di fornitura.</p>
 </section>
 
 <section>
@@ -108,22 +134,22 @@ section {
 
         <div class="card">
             <h3>Tavolame in Teak</h3>
-            <p>Fornitura di tavole in teak selezionato per uso nautico.</p>
+            <p>Tavole selezionate per utilizzo nautico e lavorazioni professionali.</p>
         </div>
 
         <div class="card">
             <h3>Doghe per Decking</h3>
-            <p>Doghe pronte per lavorazioni su coperte yacht.</p>
+            <p>Doghe pronte per realizzazione coperture yacht.</p>
         </div>
 
         <div class="card">
             <h3>Fornitura Cantieri</h3>
-            <p>Supporto e fornitura materiali per cantieri nautici e professionisti.</p>
+            <p>Fornitura continuativa per cantieri nautici e aziende del settore.</p>
         </div>
 
     </div>
 
-    <p class="note">Non effettuiamo installazione. Operiamo esclusivamente come fornitori di materiale.</p>
+    <p class="note">Operiamo esclusivamente come fornitori di materiale. Non effettuiamo installazione.</p>
 
 </section>
 
@@ -133,23 +159,17 @@ section {
     <p>Email: office@slide-srl.com</p>
 
     <p>Telefono: 
-        <a href="tel:+390583974272" style="color:#00b4d8;">
-        +39 0583 974272
-        </a>
+        <a href="tel:+390583974272">+39 0583 974272</a>
     </p>
 
-    <p><strong>Commerciale:</strong></p>
+    <p><strong>Commerciale</strong></p>
 
     <p>Mirko: 
-        <a href="tel:+39334184092" style="color:#00b4d8;">
-        +39 334 184092
-        </a>
+        <a href="tel:+39334184092">+39 334 184092</a>
     </p>
 
     <p>Alessandro: 
-        <a href="tel:+393452400638" style="color:#00b4d8;">
-        +39 345 2400638
-        </a>
+        <a href="tel:+393452400638">+39 345 2400638</a>
     </p>
 
 </section>
