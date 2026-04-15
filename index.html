@@ -17,7 +17,7 @@ body {
 header {
     height:100vh;
     background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
-    url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a');
+    url('https://images.unsplash.com/photo-1601042879364-f3947d3f9c16');
     background-size:cover;
     background-position:center;
     display:flex;
@@ -29,8 +29,6 @@ header {
 
 header h1 {
     font-size:55px;
-    margin:0;
-    letter-spacing:2px;
 }
 
 header p {
@@ -45,7 +43,6 @@ header p {
     color:black;
     text-decoration:none;
     border-radius:30px;
-    font-weight:bold;
 }
 
 /* SEZIONI */
@@ -56,12 +53,6 @@ section {
     text-align:center;
 }
 
-h2 {
-    margin-bottom:30px;
-    font-size:28px;
-}
-
-/* CARDS */
 .services {
     display:flex;
     flex-wrap:wrap;
@@ -74,28 +65,18 @@ h2 {
     padding:25px;
     border-radius:12px;
     width:300px;
-    transition:0.3s;
 }
 
-.card:hover {
-    transform:translateY(-5px);
+/* GALLERY */
+.gallery {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
 }
 
-.card h3 {
-    color:#c8a96a;
-}
-
-/* NOTE */
-.note {
-    margin-top:30px;
-    font-size:14px;
-    color:#9ca3af;
-}
-
-/* CONTATTI */
-a {
-    color:#c8a96a;
-    text-decoration:none;
+.gallery img {
+    width:100%;
+    border-radius:10px;
 }
 
 /* WHATSAPP */
@@ -107,8 +88,7 @@ a {
     color:white;
     padding:15px 20px;
     border-radius:50px;
-    font-weight:bold;
-    box-shadow:0 0 10px rgba(0,0,0,0.4);
+    text-decoration:none;
 }
 </style>
 
@@ -124,33 +104,39 @@ a {
 
 <section>
     <h2>Azienda</h2>
-    <p>Fornitori specializzati in teak di alta qualità per cantieri nautici e professionisti del settore. Selezioniamo e distribuiamo tavolame e doghe per decking nautico garantendo standard elevati e continuità di fornitura.</p>
+    <p>Fornitori specializzati in teak di alta qualità per cantieri nautici e professionisti del settore.</p>
 </section>
 
 <section>
     <h2>Forniture</h2>
 
     <div class="services">
-
         <div class="card">
             <h3>Tavolame in Teak</h3>
-            <p>Tavole selezionate per utilizzo nautico e lavorazioni professionali.</p>
+            <p>Tavole selezionate per uso nautico.</p>
         </div>
 
         <div class="card">
             <h3>Doghe per Decking</h3>
-            <p>Doghe pronte per realizzazione coperture yacht.</p>
+            <p>Doghe per lavorazioni su yacht.</p>
         </div>
 
         <div class="card">
             <h3>Fornitura Cantieri</h3>
-            <p>Fornitura continuativa per cantieri nautici e aziende del settore.</p>
+            <p>Supporto continuo per cantieri.</p>
         </div>
-
     </div>
+</section>
 
-    <p class="note">Operiamo esclusivamente come fornitori di materiale. Non effettuiamo installazione.</p>
+<section>
+    <h2>Qualità Teak</h2>
 
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1598300056393-4aac492f4344">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+    </div>
 </section>
 
 <section id="contatti">
@@ -158,20 +144,12 @@ a {
 
     <p>Email: office@slide-srl.com</p>
 
-    <p>Telefono: 
-        <a href="tel:+390583974272">+39 0583 974272</a>
-    </p>
+    <p>Telefono: <a href="tel:+390583974272">+39 0583 974272</a></p>
 
     <p><strong>Commerciale</strong></p>
 
-    <p>Mirko: 
-        <a href="tel:+39334184092">+39 334 184092</a>
-    </p>
-
-    <p>Alessandro: 
-        <a href="tel:+393452400638">+39 345 2400638</a>
-    </p>
-
+    <p>Mirko: <a href="tel:+39334184092">+39 334 184092</a></p>
+    <p>Alessandro: <a href="tel:+393452400638">+39 345 2400638</a></p>
 </section>
 
 <a class="whatsapp" href="https://wa.me/39334184092">WhatsApp</a>
