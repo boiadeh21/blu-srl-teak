@@ -8,75 +8,86 @@
 <style>
 body {
     margin:0;
-    font-family: Arial, sans-serif;
+    font-family: 'Georgia', serif;
     background: linear-gradient(180deg, #0d1b2a, #000);
     color: white;
-    text-align: center;
 }
 
 /* HERO */
 .hero {
-    padding: 100px 20px;
-    background-image: url('https://images.unsplash.com/photo-1602524819150-9c7d6e3b3e8b');
-    background-size: cover;
-    background-position: center;
+    height: 100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background: url('https://images.unsplash.com/photo-1602524819150-9c7d6e3b3e8b') center/cover;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 60px;
+    margin:0;
 }
 
 .hero p {
-    font-size: 20px;
-    color: #ccc;
+    font-size: 22px;
+    color:#ddd;
 }
 
 /* SEZIONI */
 section {
-    padding: 60px 20px;
+    padding:80px 20px;
+    text-align:center;
 }
 
 h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size:36px;
+    margin-bottom:30px;
 }
 
-/* CARDS */
-.services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+/* GRID FOTO */
+.grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
 }
 
 .card {
-    background: #111;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
+    position:relative;
 }
 
 .card img {
-    width: 100%;
-    border-radius: 10px;
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.card h3 {
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    margin:0;
+    font-size:22px;
+    background:rgba(0,0,0,0.5);
+    padding:5px 10px;
 }
 
 /* CONTATTI */
 a {
-    color: #00aaff;
-    text-decoration: none;
+    color:#00aaff;
 }
 
 /* WHATSAPP */
 .whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 30px;
-    font-weight: bold;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 20px;
+    border-radius:30px;
+    font-weight:bold;
 }
 </style>
 
@@ -85,17 +96,17 @@ a {
 
 <!-- HERO -->
 <div class="hero">
-    <h1>Blu Srl Teak</h1>
-    <p>Teak di prima qualità per yacht e nautica di lusso</p>
+    <h1>BLU SRL</h1>
+    <p>Specialisti nel teak navale</p>
 </div>
 
 <!-- CHI SIAMO -->
 <section>
     <h2>Chi siamo</h2>
     <p>
-        Siamo fornitori specializzati nella vendita di teak di alta qualità 
-        per il settore nautico. Offriamo tavolame e doghe selezionate, 
-        ideali per decking di yacht e imbarcazioni di prestigio.
+        BLU SRL è il partner di riferimento per la fornitura di teak di alta qualità
+        destinato al settore nautico. Offriamo tavolame e doghe selezionate per yacht
+        e imbarcazioni di prestigio.
     </p>
 </section>
 
@@ -103,58 +114,58 @@ a {
 <section>
     <h2>I nostri prodotti</h2>
 
-    <div class="services">
+    <div class="grid">
 
         <div class="card">
             <img src="https://images.unsplash.com/photo-1598300051801-7c1c2db0f3c4">
-            <h3>Tavolame in Teak</h3>
-            <p>Legno selezionato di alta qualità, ideale per lavorazioni nautiche.</p>
+            <h3>Tavolame in teak</h3>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1581093588401-22a4f3b6a1b1">
-            <h3>Doghe per Decking</h3>
-            <p>Doghe in teak perfette per coperture di yacht e imbarcazioni.</p>
+            <img src="https://images.unsplash.com/photo-1602524819150-9c7d6e3b3e8b">
+            <h3>Decking per yacht</h3>
         </div>
 
         <div class="card">
             <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
-            <h3>Applicazioni su Yacht</h3>
-            <p>Materiale utilizzato nei migliori yacht di lusso.</p>
+            <h3>Applicazioni nautiche</h3>
+        </div>
+
+        <!-- TRONCHI = IMPORTANTE -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581093588401-22a4f3b6a1b1">
+            <h3>Materia prima</h3>
         </div>
 
     </div>
 </section>
 
 <!-- CONTATTI -->
-<section id="contatti">
+<section>
     <h2>Contatti</h2>
 
     <p>Email: office@slide-srl.com</p>
 
     <p>
-        Telefono: 
+        Telefono:
         <a href="tel:+390583974272">+39 0583 974272</a>
     </p>
 
-    <p><strong>Commerciale:</strong></p>
+    <p><strong>Commerciale</strong></p>
 
     <p>
-        Mirko: 
+        Mirko:
         <a href="tel:+39334184092">+39 334 184092</a>
     </p>
 
     <p>
-        Alessandro: 
+        Alessandro:
         <a href="tel:+393452400638">+39 345 2400638</a>
     </p>
 
 </section>
 
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/39334184092" target="_blank">
-    WhatsApp
-</a>
+<a class="whatsapp" href="https://wa.me/39334184092">WhatsApp</a>
 
 </body>
 </html>
