@@ -3,113 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Blu Srl Teak</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<title>Blu SRL Teak</title>
 
 <style>
-
 body {
-    margin:0;
-    font-family: 'Inter', sans-serif;
-    background:#0a0f1c;
-    color:white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
 }
 
-/* HERO */
+/* HERO /
 .hero {
-    height:100vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
-    url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a') center/cover no-repeat;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
+  url('hero.jpg') center/cover no-repeat;
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size:64px;
-    letter-spacing:2px;
+  font-size: 48px;
+  margin: 0;
 }
 
 .hero p {
-    font-size:20px;
-    color:#ccc;
+  font-size: 18px;
+  margin: 10px 0 20px;
 }
 
-/* SEZIONI */
+.btn {
+  background: #c8a96a;
+  padding: 12px 25px;
+  text-decoration: none;
+  color: #000;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/ SEZIONI /
 section {
-    padding:80px 20px;
-    max-width:1100px;
-    margin:auto;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 h2 {
-    font-family: 'Playfair Display', serif;
-    font-size:40px;
-    margin-bottom:20px;
+  margin-bottom: 30px;
 }
 
-/* CARDS */
+/ CARDS /
 .cards {
-    display:flex;
-    flex-wrap:wrap;
-    gap:25px;
-    justify-content:center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .card {
-    width:320px;
-    height:220px;
-    border-radius:12px;
-    overflow:hidden;
-    position:relative;
-    transition:0.3s;
-}
-
-.card:hover {
-    transform:scale(1.05);
+  width: 300px;
 }
 
 .card img {
-    width:100%;
-    height:100%;
-    object-fit:cover;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .card span {
-    position:absolute;
-    bottom:0;
-    width:100%;
-    padding:12px;
-    background:rgba(0,0,0,0.6);
-    font-size:18px;
+  display: block;
+  margin-top: 10px;
 }
 
-/* CONTATTI */
-.contatti p {
-    margin:10px 0;
+/ CONTATTI */
+.contact {
+  background: #000;
+  padding: 60px 20px;
 }
 
-a {
-    color:#3aa6ff;
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
 }
-
-/* WHATSAPP */
-.whatsapp {
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    padding:16px 28px;
-    border-radius:50px;
-    font-weight:bold;
-    color:white;
-}
-
 </style>
 </head>
 
@@ -117,85 +96,71 @@ a {
 
 <!-- HERO -->
 <div class="hero">
-    <h1>BLU SRL</h1>
-    <p>Teak di eccellenza per la nautica</p>
+  <h1>BLU SRL TEAK</h1>
+  <p>Importazione teak certificato per nautica e design</p>
+  <a href="#contatti" class="btn">Richiedi fornitura</a>
 </div>
-
-<!-- CHI SIAMO -->
-<section>
-    <h2>Chi siamo</h2>
-    <p>
-    BLU SRL è il partner di riferimento per la fornitura di teak di alta qualità
-    destinato al settore nautico.
-    Selezioniamo tavolame e doghe per garantire performance e durata nel tempo.
-    </p>
-</section>
 
 <!-- PRODOTTI -->
 <section>
-    <h2>I nostri prodotti</h2>
+  <h2>I nostri prodotti</h2>
 
-    <div class="cards">
+  <div class="cards">
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-            <span>Tavolame in teak</span>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1581091012184-5c63a84b9b6b">
-            <span>Doghe per decking</span>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a">
-            <span>Applicazioni nautiche</span>
-        </div>
-
+    <div class="card">
+      <img src="dettaglio.jpg">
+      <span>Tavole, doghe e tranciati</span>
     </div>
 
+    <div class="card">
+      <img src="yacht.jpg">
+      <span>Applicazioni nautiche</span>
+    </div>
+
+    <div class="card">
+      <img src="tronchi.jpg">
+      <span>Teak grezzo selezionato</span>
+    </div>
+
+  </div>
 </section>
 
-<!-- QUALITÀ -->
+<!-- FILIERA -->
 <section>
-    <h2>Qualità certificata</h2>
-    <p>
-    ✔ Legno selezionato<br>
-    ✔ Alta resistenza<br>
-    ✔ Certificazione FSC<br>
-    ✔ Conformità EUDR
-    </p>
+  <h2>Filiera certificata</h2>
+
+  <div class="cards">
+    <div class="card">
+      <img src="foresta.jpg">
+      <span>Foreste controllate e sostenibili</span>
+    </div>
+  </div>
+
+  <p>
+  Importiamo teak certificato garantendo qualità, tracciabilità e sostenibilità
+  lungo tutta la filiera produttiva.
+  </p>
+</section>
+
+<!-- CLIENTI -->
+<section>
+  <h2>A chi ci rivolgiamo</h2>
+  <p>
+  Cantieri navali, falegnamerie, progettisti e clienti privati.
+  Forniamo teak per ogni tipo di lavorazione e progetto.
+  </p>
 </section>
 
 <!-- CONTATTI -->
-<section class="contatti">
-    <h2>Contatti</h2>
-
-    <p>Email: office@slide-srl.com</p>
-
-    <p>
-    Telefono:
-    <a href="tel:+390583974272">+39 0583 974272</a>
-    </p>
-
-    <p><strong>Commerciale</strong></p>
-
-    <p>
-    Mirko:
-    <a href="tel:+39334184092">+39 334 184092</a>
-    </p>
-
-    <p>
-    Alessandro:
-    <a href="tel:+393452400638">+39 345 2400638</a>
-    </p>
-
+<section id="contatti" class="contact">
+  <h2>Contattaci</h2>
+  <p>Email: info@blusrlteak.com</p>
+  <p>Telefono: +39 XXX XXX XXXX</p>
 </section>
 
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/39334184092">
-    WhatsApp
-</a>
+<footer>
+  © 2026 Blu SRL Teak
+</footer>
 
 </body>
 </html>
