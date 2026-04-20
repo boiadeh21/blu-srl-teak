@@ -13,23 +13,29 @@ body {
     color:white;
 }
 
+/* HEADER CONTATTI */
+.topbar {
+    background:#020617;
+    padding:10px;
+    text-align:center;
+    font-size:14px;
+}
+
 /* HERO */
 .hero {
     height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
+    background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)),
     url('hero.JPG') center/cover no-repeat;
 
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
 }
 
-/* LOGO */
+/* LOGO SENZA SFONDO */
 .hero img {
     width:260px;
-    background:rgba(0,0,0,0.4);
-    padding:30px;
-    border-radius:15px;
 }
 
 /* SEZIONI */
@@ -42,14 +48,6 @@ section {
 h2 {
     text-align:center;
     margin-bottom:30px;
-    font-size:30px;
-}
-
-/* TESTO */
-p {
-    text-align:center;
-    line-height:1.6;
-    color:#ddd;
 }
 
 /* GRID */
@@ -57,7 +55,6 @@ p {
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
     gap:25px;
-    margin-top:30px;
 }
 
 /* CARD */
@@ -65,20 +62,11 @@ p {
     background:#1e293b;
     padding:20px;
     border-radius:12px;
-    text-align:center;
 }
 
 .card img {
     width:100%;
     border-radius:10px;
-    margin-bottom:15px;
-}
-
-/* LISTE */
-ul {
-    text-align:left;
-    padding-left:20px;
-    line-height:1.6;
 }
 
 /* FOOTER */
@@ -93,6 +81,11 @@ footer {
 
 <body>
 
+<!-- CONTATTI SUBITO VISIBILI -->
+<div class="topbar">
+    📞 +39 0583 97 42 74 | 📧 office@slide-srl.com | Mirko: +39 334 1854092 | Alessandro: +39 345 240 0638
+</div>
+
 <!-- HERO -->
 <div class="hero">
     <img src="logo.PNG">
@@ -101,8 +94,7 @@ footer {
 <!-- CHI SIAMO -->
 <section>
     <h2>CHI SIAMO</h2>
-
-    <p>
+    <p style="text-align:center; color:#ddd;">
     BLU SRL è il partner di riferimento per la fornitura di teak di alta qualità
     destinato al settore nautico.
     </p>
@@ -148,13 +140,9 @@ footer {
 <section>
     <h2>PRODOTTO CERTIFICATO</h2>
 
-    <p>
-    EUDR - FSC
-    </p>
-
-    <ul>
+    <ul style="color:#ddd;">
         <li>Certificato FSC per la gestione forestale sostenibile</li>
-        <li>Conformità al regolamento EUDR</li>
+        <li>Conformità regolamento EUDR</li>
         <li>Prodotto sicuro ed eco-friendly</li>
     </ul>
 </section>
@@ -171,33 +159,17 @@ footer {
     </div>
 </section>
 
-<!-- CONTATTI -->
+<!-- FOOTER COMPLETO -->
 <footer>
-
-    <h2>Contatti</h2>
 
     <p>
     <strong>Uffici Amministrativi</strong><br>
-    Via Pesciatina 878B<br>
-    55010 Gragnano (LU)
+    Via Pesciatina 878B - 55010 Gragnano (LU)
     </p>
 
     <p>
     <strong>Sede Legale</strong><br>
-    Via Don E. Angeli 181<br>
-    55018 Segromigno in Piano (LU)
-    </p>
-
-    <p>
-    Tel. +39 0583 97 42 74<br>
-    Fax +39 0583 97 42 58<br>
-    Email: office@slide-srl.com
-    </p>
-
-    <p>
-    <strong>Commerciale</strong><br><br>
-    Mirko: +39 334 1854092<br>
-    Alessandro: +39 345 240 0638
+    Via Don E. Angeli 181 - 55018 Segromigno in Piano (LU)
     </p>
 
 </footer>
