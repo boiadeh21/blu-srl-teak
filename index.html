@@ -22,53 +22,63 @@ body {
     display:flex;
     justify-content:center;
     align-items:center;
-    text-align:center;
 }
 
-/* LOGO CENTRALE */
+/* LOGO */
 .hero img {
-    width:240px;
+    width:260px;
     background:rgba(0,0,0,0.4);
-    padding:25px;
+    padding:30px;
     border-radius:15px;
-    box-shadow:0 0 40px rgba(0,0,0,0.6);
 }
 
 /* SEZIONI */
 section {
-    padding:60px 20px;
-    max-width:1000px;
+    padding:70px 20px;
+    max-width:1100px;
     margin:auto;
-    text-align:center;
 }
 
 h2 {
-    margin-bottom:20px;
-    font-size:28px;
+    text-align:center;
+    margin-bottom:30px;
+    font-size:30px;
 }
 
 /* TESTO */
 p {
+    text-align:center;
     line-height:1.6;
     color:#ddd;
 }
 
-/* GALLERY */
-.gallery {
+/* GRID */
+.grid {
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-    gap:20px;
+    gap:25px;
     margin-top:30px;
 }
 
-.gallery img {
-    width:100%;
+/* CARD */
+.card {
+    background:#1e293b;
+    padding:20px;
     border-radius:12px;
-    transition:0.3s;
+    text-align:center;
 }
 
-.gallery img:hover {
-    transform:scale(1.05);
+.card img {
+    width:100%;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+/* LISTE */
+ul {
+    text-align:left;
+    padding-left:20px;
+    line-height:1.6;
 }
 
 /* FOOTER */
@@ -78,48 +88,82 @@ footer {
     text-align:center;
     line-height:1.7;
 }
-
-strong {
-    color:#fff;
-}
 </style>
 </head>
 
 <body>
 
-<!-- HERO CON LOGO -->
+<!-- HERO -->
 <div class="hero">
     <img src="logo.PNG">
 </div>
 
-<!-- DESCRIZIONE -->
+<!-- CHI SIAMO -->
 <section>
-    <h2>Importazione e Vendita Teak</h2>
+    <h2>CHI SIAMO</h2>
 
     <p>
-    Importazione diretta di teak certificato di alta qualità.<br><br>
-
-    Fornitura di:
-    <br><br>
-    • Tavole teak<br>
-    • Doghe teak<br>
-    • Tranciato teak<br><br>
-
-    Applicazioni:
-    <br><br>
-    • Nautica (yacht e imbarcazioni)<br>
-    • Arredamento di pregio<br>
-    • Progetti su misura<br><br>
-
-    Materiale selezionato, resistente e garantito.
+    BLU SRL è il partner di riferimento per la fornitura di teak di alta qualità
+    destinato al settore nautico.
     </p>
+</section>
+
+<!-- PRODOTTI -->
+<section>
+    <h2>I NOSTRI PRODOTTI</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="dettaglio.JPG">
+            <h3>Tavolame in Teak</h3>
+            <ul>
+                <li>Legno selezionato</li>
+                <li>Alta resistenza</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <img src="yacht.PNG">
+            <h3>Doghe in Teak</h3>
+            <ul>
+                <li>Decking nautico</li>
+                <li>Finitura precisa</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <img src="tronchi.PNG">
+            <h3>Materia Prima</h3>
+            <ul>
+                <li>Selezione all’origine</li>
+                <li>Qualità garantita</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- CERTIFICAZIONI -->
+<section>
+    <h2>PRODOTTO CERTIFICATO</h2>
+
+    <p>
+    EUDR - FSC
+    </p>
+
+    <ul>
+        <li>Certificato FSC per la gestione forestale sostenibile</li>
+        <li>Conformità al regolamento EUDR</li>
+        <li>Prodotto sicuro ed eco-friendly</li>
+    </ul>
 </section>
 
 <!-- GALLERY -->
 <section>
     <h2>Gallery</h2>
 
-    <div class="gallery">
+    <div class="grid">
         <img src="yacht.PNG">
         <img src="dettaglio.JPG">
         <img src="tronchi.PNG">
