@@ -19,7 +19,7 @@ body {
 /* HERO */
 .hero {
     height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.85)),
+    background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9)),
     url('hero.JPG') center/cover no-repeat;
 
     display:flex;
@@ -32,13 +32,26 @@ body {
 /* LOGO */
 .hero img {
     width:240px;
-    margin-bottom:25px;
+    margin-bottom:20px;
+}
+
+/* HEADLINE */
+.headline {
+    font-size:28px;
+    font-weight:500;
+    margin-bottom:20px;
 }
 
 /* CONTATTI */
 .contatti {
     font-size:18px;
-    line-height:1.8;
+    line-height:2;
+}
+
+/* LINK TELEFONO */
+.contatti a {
+    color:#fff;
+    text-decoration:none;
 }
 
 /* SEZIONI */
@@ -48,11 +61,9 @@ section {
     margin:auto;
 }
 
-/* TITOLI */
 h2 {
     text-align:center;
     margin-bottom:30px;
-    font-weight:500;
 }
 
 /* GRID */
@@ -67,11 +78,6 @@ h2 {
     background:#111827;
     border-radius:15px;
     overflow:hidden;
-    transition:0.3s;
-}
-
-.card:hover {
-    transform:translateY(-10px);
 }
 
 .card img {
@@ -87,11 +93,24 @@ h2 {
     color:#ccc;
 }
 
-/* CERTIFICAZIONE PREMIUM */
+/* PERCHE NOI */
+.features {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:25px;
+    text-align:center;
+}
+
+.features div {
+    background:#111827;
+    padding:20px;
+    border-radius:10px;
+}
+
+/* CERT */
 .cert {
-    display:flex;
-    justify-content:center;
-    margin-top:40px;
+    text-align:center;
+    margin-top:30px;
 }
 
 .cert span {
@@ -99,17 +118,13 @@ h2 {
     color:#c8a96a;
     padding:15px 30px;
     border-radius:50px;
-    font-weight:600;
-    letter-spacing:1px;
-    font-size:16px;
 }
 
 /* FOOTER */
 footer {
     background:#020617;
     text-align:center;
-    padding:50px 20px;
-    color:#aaa;
+    padding:50px;
 }
 
 /* WHATSAPP */
@@ -133,13 +148,17 @@ footer {
 
     <img src="logo.PNG">
 
+    <div class="headline">
+        Teak di alta qualità per nautica e progetti su misura
+    </div>
+
     <div class="contatti">
-        📞 +39 0583 97 42 74<br>
-        📧 office@slide-srl.com<br><br>
+        📞 <a href="tel:+390583974274">+39 0583 97 42 74</a><br>
+        📧 <a href="mailto:office@slide-srl.com">office@slide-srl.com</a><br><br>
 
         <strong>Commerciale</strong><br>
-        Mirko: +39 334 1854092<br>
-        Alessandro: +39 345 240 0638
+        Mirko: <a href="tel:+393341854092">+39 334 1854092</a><br>
+        Alessandro: <a href="tel:+393452400638">+39 345 240 0638</a>
     </div>
 
 </div>
@@ -148,8 +167,20 @@ footer {
 <section>
     <h2>CHI SIAMO</h2>
     <p style="text-align:center; color:#ccc;">
-    BLU SRL è il partner di riferimento per la fornitura di teak di alta qualità destinato al settore nautico.
+    BLU SRL è specializzata nella fornitura di teak certificato per il settore nautico e arredamento di alta gamma.
     </p>
+</section>
+
+<!-- PERCHE SCEGLIERE NOI -->
+<section>
+    <h2>Perché scegliere BLU SRL</h2>
+
+    <div class="features">
+        <div>✔ Teak selezionato di alta qualità</div>
+        <div>✔ Forniture per cantieri nautici</div>
+        <div>✔ Esperienza e affidabilità</div>
+        <div>✔ Materiale certificato FSC</div>
+    </div>
 </section>
 
 <!-- PRODOTTI -->
@@ -157,48 +188,32 @@ footer {
     <h2>I NOSTRI PRODOTTI</h2>
 
     <div class="grid">
-
         <div class="card">
             <img src="dettaglio.JPG">
-            <h3>Tavolame in Teak</h3>
-            <p>Legno selezionato - Alta resistenza</p>
+            <h3>Tavolame</h3>
+            <p>Alta qualità e resistenza</p>
         </div>
 
         <div class="card">
             <img src="yacht.PNG">
-            <h3>Doghe in Teak</h3>
-            <p>Decking nautico - Finitura precisa</p>
+            <h3>Doghe</h3>
+            <p>Decking nautico</p>
         </div>
 
         <div class="card">
             <img src="tronchi.PNG">
             <h3>Materia Prima</h3>
-            <p>Selezione all’origine - Qualità garantita</p>
+            <p>Selezione origine</p>
         </div>
-
     </div>
 
 </section>
 
-<!-- CERTIFICAZIONE -->
+<!-- CERT -->
 <section>
-    <h2>PRODOTTO CERTIFICATO</h2>
-
+    <h2>Certificazione</h2>
     <div class="cert">
         <span>FSC® Certified Products Available</span>
-    </div>
-
-</section>
-
-<!-- GALLERY -->
-<section>
-    <h2>Gallery</h2>
-
-    <div class="grid">
-        <img src="yacht.PNG">
-        <img src="dettaglio.JPG">
-        <img src="tronchi.PNG">
-        <img src="Foresta.JPG">
     </div>
 </section>
 
@@ -206,13 +221,8 @@ footer {
 <footer>
 
     <p>
-    Uffici Amministrativi<br>
-    Via Pesciatina 878B - 55010 Gragnano (LU)
-    </p>
-
-    <p>
-    Sede Legale<br>
-    Via Don E. Angeli 181 - 55018 Segromigno in Piano (LU)
+    Via Pesciatina 878B - Gragnano (LU)<br>
+    Via Don E. Angeli 181 - Segromigno (LU)
     </p>
 
 </footer>
