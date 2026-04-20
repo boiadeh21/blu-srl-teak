@@ -12,33 +12,16 @@
 body {
     margin:0;
     font-family:'Poppins', sans-serif;
+    background:#0b1220;
     color:white;
-    background:black;
-}
-
-/* VIDEO BACKGROUND */
-.video-bg {
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    z-index:-1;
-}
-
-/* OVERLAY */
-.overlay {
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.65);
-    z-index:-1;
 }
 
 /* HERO */
 .hero {
     height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.85)),
+    url('hero.JPG') center/cover no-repeat;
+
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -48,17 +31,19 @@ body {
 
 /* LOGO */
 .hero img {
-    width:260px;
-    margin-bottom:30px;
+    width:240px;
+    margin-bottom:25px;
 }
 
-/* CONTATTI */
+/* CONTATTI SENZA SFONDO */
 .contatti {
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(10px);
-    padding:25px 35px;
-    border-radius:15px;
-    line-height:2;
+    font-size:18px;
+    line-height:1.8;
+    color:#ffffff;
+}
+
+.contatti strong {
+    color:#ffffff;
 }
 
 /* LANGUAGE */
@@ -68,18 +53,17 @@ body {
     right:20px;
 }
 
-.lang button {
-    padding:6px 10px;
-    margin-left:5px;
-    border:none;
-    cursor:pointer;
-}
-
 /* SEZIONI */
 section {
     padding:80px 20px;
     max-width:1100px;
     margin:auto;
+}
+
+/* TITOLI */
+h2 {
+    text-align:center;
+    margin-bottom:30px;
 }
 
 /* GRID */
@@ -91,7 +75,7 @@ section {
 
 /* CARD */
 .card {
-    background:rgba(0,0,0,0.6);
+    background:#111827;
     border-radius:15px;
     overflow:hidden;
     transition:0.3s;
@@ -105,6 +89,40 @@ section {
     width:100%;
 }
 
+.card h3 {
+    padding:15px;
+}
+
+.card p {
+    padding:0 15px 20px;
+    color:#ccc;
+}
+
+/* CERTIFICAZIONI PREMIUM */
+.cert {
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.cert div {
+    border:2px solid #c8a96a;
+    padding:20px 30px;
+    border-radius:10px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+/* FOOTER */
+footer {
+    background:#020617;
+    text-align:center;
+    padding:50px 20px;
+    color:#aaa;
+}
+
 /* WHATSAPP */
 .whatsapp {
     position:fixed;
@@ -116,28 +134,10 @@ section {
     text-decoration:none;
     font-size:22px;
 }
-
-/* TITOLI */
-h2 {
-    text-align:center;
-}
 </style>
 </head>
 
 <body>
-
-<!-- VIDEO -->
-<video autoplay muted loop class="video-bg">
-    <source src="video.mp4" type="video/mp4">
-</video>
-
-<div class="overlay"></div>
-
-<!-- LANGUAGE -->
-<div class="lang">
-    <button onclick="setLang('it')">IT</button>
-    <button onclick="setLang('en')">EN</button>
-</div>
 
 <!-- HERO -->
 <div class="hero">
@@ -148,94 +148,90 @@ h2 {
         📞 +39 0583 97 42 74<br>
         📧 office@slide-srl.com<br><br>
 
-        <strong id="sales">Commerciale</strong><br>
+        <strong>Commerciale</strong><br>
         Mirko: +39 334 1854092<br>
         Alessandro: +39 345 240 0638
     </div>
 
 </div>
 
-<!-- ABOUT -->
+<!-- CHI SIAMO -->
 <section>
-    <h2 id="about-title">CHI SIAMO</h2>
-    <p id="about-text" style="text-align:center;">
-    BLU SRL è il partner di riferimento per la fornitura di teak di alta qualità per il settore nautico.
+    <h2>CHI SIAMO</h2>
+    <p style="text-align:center; color:#ccc;">
+    BLU SRL è il partner di riferimento per la fornitura di teak di alta qualità destinato al settore nautico.
     </p>
 </section>
 
-<!-- PRODUCTS -->
+<!-- PRODOTTI -->
 <section>
-    <h2 id="prod">I NOSTRI PRODOTTI</h2>
+    <h2>I NOSTRI PRODOTTI</h2>
 
     <div class="grid">
 
         <div class="card">
             <img src="dettaglio.JPG">
-            <h3 id="p1">Tavolame</h3>
-            <p id="p1t">Alta qualità</p>
+            <h3>Tavolame in Teak</h3>
+            <p>Legno selezionato - Alta resistenza</p>
         </div>
 
         <div class="card">
             <img src="yacht.PNG">
-            <h3 id="p2">Doghe</h3>
-            <p id="p2t">Decking nautico</p>
+            <h3>Doghe in Teak</h3>
+            <p>Decking nautico - Finitura precisa</p>
         </div>
 
         <div class="card">
             <img src="tronchi.PNG">
-            <h3 id="p3">Materia Prima</h3>
-            <p id="p3t">Selezione origine</p>
+            <h3>Materia Prima</h3>
+            <p>Selezione all’origine - Qualità garantita</p>
         </div>
 
     </div>
+
 </section>
 
-<!-- CERT -->
+<!-- CERTIFICAZIONI -->
 <section>
-    <h2 id="cert">CERTIFICAZIONI</h2>
-    <p id="certt" style="text-align:center;">
-    FSC - EUDR | Sustainable teak
-    </p>
+    <h2>PRODOTTO CERTIFICATO</h2>
+
+    <div class="cert">
+        <div>FSC CERTIFIED</div>
+        <div>EUDR COMPLIANT</div>
+        <div>ECO FRIENDLY</div>
+    </div>
+
+</section>
+
+<!-- GALLERY -->
+<section>
+    <h2>Gallery</h2>
+
+    <div class="grid">
+        <img src="yacht.PNG">
+        <img src="dettaglio.JPG">
+        <img src="tronchi.PNG">
+        <img src="Foresta.JPG">
+    </div>
 </section>
 
 <!-- FOOTER -->
-<section style="text-align:center;">
-    Via Pesciatina 878B - Gragnano (LU)<br>
-    Via Don E. Angeli 181 - Segromigno (LU)
-</section>
+<footer>
+
+    <p>
+    Uffici Amministrativi<br>
+    Via Pesciatina 878B - 55010 Gragnano (LU)
+    </p>
+
+    <p>
+    Sede Legale<br>
+    Via Don E. Angeli 181 - 55018 Segromigno in Piano (LU)
+    </p>
+
+</footer>
 
 <!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/393341854092">💬</a>
-
-<!-- SCRIPT LINGUA -->
-<script>
-function setLang(lang){
-
-if(lang=="en"){
-document.getElementById("about-title").innerText="ABOUT US";
-document.getElementById("about-text").innerText="BLU SRL is a leading supplier of high-quality teak for the nautical sector.";
-
-document.getElementById("prod").innerText="OUR PRODUCTS";
-document.getElementById("p1").innerText="Teak Timber";
-document.getElementById("p1t").innerText="High quality wood";
-
-document.getElementById("p2").innerText="Teak Decking";
-document.getElementById("p2t").innerText="Marine decking";
-
-document.getElementById("p3").innerText="Raw Material";
-document.getElementById("p3t").innerText="Origin selection";
-
-document.getElementById("cert").innerText="CERTIFICATIONS";
-document.getElementById("certt").innerText="FSC - EUDR certified teak";
-
-document.getElementById("sales").innerText="Sales";
-}
-
-if(lang=="it"){
-location.reload();
-}
-}
-</script>
 
 </body>
 </html>
