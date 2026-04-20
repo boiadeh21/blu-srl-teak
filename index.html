@@ -38,7 +38,6 @@ body {
 /* HEADLINE */
 .headline {
     font-size:28px;
-    font-weight:500;
     margin-bottom:20px;
 }
 
@@ -48,9 +47,8 @@ body {
     line-height:2;
 }
 
-/* LINK TELEFONO */
 .contatti a {
-    color:#fff;
+    color:white;
     text-decoration:none;
 }
 
@@ -93,7 +91,7 @@ h2 {
     color:#ccc;
 }
 
-/* PERCHE NOI */
+/* FEATURES */
 .features {
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
@@ -107,17 +105,21 @@ h2 {
     border-radius:10px;
 }
 
-/* CERT */
+/* CERTIFICAZIONI */
 .cert {
-    text-align:center;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
     margin-top:30px;
 }
 
-.cert span {
+.cert-item {
     border:2px solid #c8a96a;
     color:#c8a96a;
-    padding:15px 30px;
+    padding:12px 25px;
     border-radius:50px;
+    font-weight:500;
 }
 
 /* FOOTER */
@@ -171,7 +173,7 @@ footer {
     </p>
 </section>
 
-<!-- PERCHE SCEGLIERE NOI -->
+<!-- PERCHE NOI -->
 <section>
     <h2>Perché scegliere BLU SRL</h2>
 
@@ -179,7 +181,7 @@ footer {
         <div>✔ Teak selezionato di alta qualità</div>
         <div>✔ Forniture per cantieri nautici</div>
         <div>✔ Esperienza e affidabilità</div>
-        <div>✔ Materiale certificato FSC</div>
+        <div>✔ Materiale certificato FSC ed EUDR</div>
     </div>
 </section>
 
@@ -188,6 +190,7 @@ footer {
     <h2>I NOSTRI PRODOTTI</h2>
 
     <div class="grid">
+
         <div class="card">
             <img src="dettaglio.JPG">
             <h3>Tavolame</h3>
@@ -205,15 +208,31 @@ footer {
             <h3>Materia Prima</h3>
             <p>Selezione origine</p>
         </div>
+
     </div>
 
 </section>
 
-<!-- CERT -->
+<!-- CERTIFICAZIONI -->
 <section>
-    <h2>Certificazione</h2>
+    <h2>Certificazioni</h2>
+
     <div class="cert">
-        <span>FSC® Certified Products Available</span>
+        <div class="cert-item">FSC® Certified Products Available</div>
+        <div class="cert-item">EUDR Compliant</div>
+    </div>
+
+</section>
+
+<!-- GALLERY -->
+<section>
+    <h2>Gallery</h2>
+
+    <div class="grid">
+        <img src="yacht.PNG">
+        <img src="dettaglio.JPG">
+        <img src="tronchi.PNG">
+        <img src="Foresta.JPG">
     </div>
 </section>
 
@@ -221,8 +240,13 @@ footer {
 <footer>
 
     <p>
-    Via Pesciatina 878B - Gragnano (LU)<br>
-    Via Don E. Angeli 181 - Segromigno (LU)
+    Uffici Amministrativi<br>
+    Via Pesciatina 878B - 55010 Gragnano (LU)
+    </p>
+
+    <p>
+    Sede Legale<br>
+    Via Don E. Angeli 181 - 55018 Segromigno in Piano (LU)
     </p>
 
 </footer>
