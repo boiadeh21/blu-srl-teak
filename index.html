@@ -1,78 +1,131 @@
 <!DOCTYPE html>
-<html lang="it">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blu SRL Teak</title>
+<title>BLU SRL TEAK</title>
 
 <style>
 body {
-    margin: 0;
+    margin:0;
     font-family: Arial;
-    background: #111;
-    color: white;
+    background:#f5f5f5;
 }
 
-header {
-    background: url('hero.JPG') center/cover;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+/* HERO */
+.hero {
+    background-image:url('hero.JPG');
+    height:60vh;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-header h1 {
-    font-size: 50px;
-    background: rgba(0,0,0,0.5);
-    padding: 20px;
+.hero h1 {
+    color:white;
+    background:rgba(0,0,0,0.5);
+    padding:20px;
+    font-size:40px;
 }
 
+/* SEZIONI */
 section {
-    padding: 40px;
+    padding:40px;
+    text-align:center;
 }
 
+/* GALLERIA */
 .gallery {
-    display: grid;
+    display:grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 20px;
+    gap:20px;
 }
 
 .gallery img {
-    width: 100%;
-    border-radius: 10px;
+    width:100%;
+    border-radius:10px;
 }
 
+/* FOOTER */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: black;
+    background:#111;
+    color:white;
+    padding:40px;
+    text-align:center;
+    line-height:1.6;
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<div class="hero">
     <h1>BLU SRL TEAK</h1>
-</header>
+</div>
 
 <section>
     <h2>Importazione e Vendita Teak</h2>
-    <p>
-        Tavole, doghe e tranciato di teak certificato.
-        Forniamo materiali per nautica, arredamento e progetti su misura.
-    </p>
 
-<img src="yacht.PNG">
-<img src="dettaglio.JPG">
-<img src="tronchi.PNG">
-<img src="Foresta.JPG">
-<img src="hero.JPG">
+    <p>
+    Importazione diretta di teak certificato di alta qualità.<br><br>
+
+    Fornitura di:
+    <br><br>
+    • Tavole teak<br>
+    • Doghe teak<br>
+    • Tranciato teak<br><br>
+
+    Settori:
+    <br><br>
+    • Nautica (yacht e imbarcazioni)<br>
+    • Arredamento<br>
+    • Progetti su misura<br><br>
+
+    Materiale selezionato, resistente e garantito.
+    </p>
+</section>
+
+<section>
+    <h2>Gallery</h2>
+
+    <div class="gallery">
+        <img src="hero.JPG">
+        <img src="yacht.PNG">
+        <img src="dettaglio.JPG">
+        <img src="tronchi.PNG">
+        <img src="Foresta.JPG">
+    </div>
 </section>
 
 <footer>
-    <p>Contattaci per forniture e preventivi</p>
+
+    <h2>Contatti</h2>
+
+    <p>
+    <strong>Uffici Amministrativi</strong><br>
+    Via Pesciatina 878B<br>
+    55010 Gragnano (LU)
+    </p>
+
+    <p>
+    <strong>Sede Legale</strong><br>
+    Via Don E. Angeli 181<br>
+    55018 Segromigno in Piano (LU)
+    </p>
+
+    <p>
+    Telefono: +39 0583 97 42 74<br>
+    Fax: +39 0583 97 42 58<br>
+    Email: office@slide-srl.com
+    </p>
+
+    <p>
+    <strong>Commerciale</strong><br><br>
+    Mirko: +39 334 1854092<br>
+    Alessandro: +39 345 240 0638
+    </p>
+
 </footer>
 
 </body>
