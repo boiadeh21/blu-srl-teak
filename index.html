@@ -13,29 +13,33 @@ body {
     color:white;
 }
 
-/* HEADER CONTATTI */
-.topbar {
-    background:#020617;
-    padding:10px;
-    text-align:center;
-    font-size:14px;
-}
-
 /* HERO */
 .hero {
     height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)),
+    background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.85)),
     url('hero.JPG') center/cover no-repeat;
 
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    text-align:center;
 }
 
-/* LOGO SENZA SFONDO */
+/* LOGO */
 .hero img {
-    width:260px;
+    width:220px;
+    margin-bottom:20px;
+}
+
+/* CONTATTI SOTTO LOGO */
+.contatti {
+    font-size:18px;
+    line-height:1.8;
+    color:white;
+    background:rgba(0,0,0,0.5);
+    padding:20px 30px;
+    border-radius:10px;
 }
 
 /* SEZIONI */
@@ -62,39 +66,46 @@ h2 {
     background:#1e293b;
     padding:20px;
     border-radius:12px;
+    text-align:center;
 }
 
 .card img {
     width:100%;
     border-radius:10px;
+    margin-bottom:10px;
 }
 
 /* FOOTER */
 footer {
     background:#020617;
-    padding:50px 20px;
+    padding:40px;
     text-align:center;
-    line-height:1.7;
 }
 </style>
 </head>
 
 <body>
 
-<!-- CONTATTI SUBITO VISIBILI -->
-<div class="topbar">
-    📞 +39 0583 97 42 74 | 📧 office@slide-srl.com | Mirko: +39 334 1854092 | Alessandro: +39 345 240 0638
-</div>
-
-<!-- HERO -->
+<!-- HERO CON LOGO + CONTATTI -->
 <div class="hero">
+
     <img src="logo.PNG">
+
+    <div class="contatti">
+        📞 +39 0583 97 42 74<br>
+        📧 office@slide-srl.com<br><br>
+
+        <strong>Commerciale</strong><br>
+        Mirko: +39 334 1854092<br>
+        Alessandro: +39 345 240 0638
+    </div>
+
 </div>
 
 <!-- CHI SIAMO -->
 <section>
     <h2>CHI SIAMO</h2>
-    <p style="text-align:center; color:#ddd;">
+    <p>
     BLU SRL è il partner di riferimento per la fornitura di teak di alta qualità
     destinato al settore nautico.
     </p>
@@ -109,28 +120,19 @@ footer {
         <div class="card">
             <img src="dettaglio.JPG">
             <h3>Tavolame in Teak</h3>
-            <ul>
-                <li>Legno selezionato</li>
-                <li>Alta resistenza</li>
-            </ul>
+            <p>Legno selezionato - Alta resistenza</p>
         </div>
 
         <div class="card">
             <img src="yacht.PNG">
             <h3>Doghe in Teak</h3>
-            <ul>
-                <li>Decking nautico</li>
-                <li>Finitura precisa</li>
-            </ul>
+            <p>Decking nautico - Finitura precisa</p>
         </div>
 
         <div class="card">
             <img src="tronchi.PNG">
             <h3>Materia Prima</h3>
-            <ul>
-                <li>Selezione all’origine</li>
-                <li>Qualità garantita</li>
-            </ul>
+            <p>Selezione all’origine - Qualità garantita</p>
         </div>
 
     </div>
@@ -140,10 +142,12 @@ footer {
 <section>
     <h2>PRODOTTO CERTIFICATO</h2>
 
-    <ul style="color:#ddd;">
-        <li>Certificato FSC per la gestione forestale sostenibile</li>
+    <p>EUDR - FSC</p>
+
+    <ul>
+        <li>Certificato FSC gestione forestale sostenibile</li>
         <li>Conformità regolamento EUDR</li>
-        <li>Prodotto sicuro ed eco-friendly</li>
+        <li>Prodotto eco-friendly</li>
     </ul>
 </section>
 
@@ -159,7 +163,7 @@ footer {
     </div>
 </section>
 
-<!-- FOOTER COMPLETO -->
+<!-- FOOTER -->
 <footer>
 
     <p>
