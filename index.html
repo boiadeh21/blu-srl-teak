@@ -32,10 +32,10 @@ body {
 /* LOGO */
 .hero img {
     width:240px;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
-/* CONTATTI SENZA SFONDO */
+/* CONTATTI */
 .contatti {
     font-size:18px;
     line-height:1.8;
@@ -52,6 +52,7 @@ section {
 h2 {
     text-align:center;
     margin-bottom:30px;
+    font-weight:500;
 }
 
 /* GRID */
@@ -86,20 +87,21 @@ h2 {
     color:#ccc;
 }
 
-/* CERTIFICAZIONI */
+/* CERTIFICAZIONE PREMIUM */
 .cert {
-    text-align:center;
-    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
 }
 
-.cert strong {
-    font-size:22px;
+.cert span {
+    border:2px solid #c8a96a;
     color:#c8a96a;
-}
-
-.cert p {
-    color:#ccc;
-    margin-top:10px;
+    padding:15px 30px;
+    border-radius:50px;
+    font-weight:600;
+    letter-spacing:1px;
+    font-size:16px;
 }
 
 /* FOOTER */
@@ -178,16 +180,12 @@ footer {
 
 </section>
 
-<!-- CERTIFICAZIONE FSC -->
+<!-- CERTIFICAZIONE -->
 <section>
     <h2>PRODOTTO CERTIFICATO</h2>
 
     <div class="cert">
-        <strong>FSC® Certified Products Available</strong>
-        <p>
-        Prodotti certificati FSC disponibili su richiesta.<br>
-        Gestione forestale responsabile e sostenibile.
-        </p>
+        <span>FSC® Certified Products Available</span>
     </div>
 
 </section>
