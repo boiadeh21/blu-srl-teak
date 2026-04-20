@@ -12,15 +12,33 @@
 body {
     margin:0;
     font-family:'Poppins', sans-serif;
-    background:#0b1220;
     color:white;
+    background:black;
+}
+
+/* VIDEO BACKGROUND */
+.video-bg {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-1;
+}
+
+/* OVERLAY */
+.overlay {
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    z-index:-1;
 }
 
 /* HERO */
 .hero {
     height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)),
-    url('hero.JPG') center/cover no-repeat;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -37,13 +55,13 @@ body {
 /* CONTATTI */
 .contatti {
     background:rgba(255,255,255,0.08);
-    backdrop-filter: blur(12px);
+    backdrop-filter:blur(10px);
     padding:25px 35px;
     border-radius:15px;
     line-height:2;
 }
 
-/* LANGUAGE SWITCH */
+/* LANGUAGE */
 .lang {
     position:fixed;
     top:20px;
@@ -51,8 +69,8 @@ body {
 }
 
 .lang button {
-    margin-left:10px;
-    padding:5px 10px;
+    padding:6px 10px;
+    margin-left:5px;
     border:none;
     cursor:pointer;
 }
@@ -64,12 +82,6 @@ section {
     margin:auto;
 }
 
-/* TITOLI */
-h2 {
-    text-align:center;
-    margin-bottom:30px;
-}
-
 /* GRID */
 .grid {
     display:grid;
@@ -79,7 +91,7 @@ h2 {
 
 /* CARD */
 .card {
-    background:#111827;
+    background:rgba(0,0,0,0.6);
     border-radius:15px;
     overflow:hidden;
     transition:0.3s;
@@ -91,23 +103,6 @@ h2 {
 
 .card img {
     width:100%;
-}
-
-.card h3 {
-    padding:15px;
-}
-
-.card p {
-    padding:0 15px 20px;
-    color:#ccc;
-}
-
-/* FOOTER */
-footer {
-    background:#020617;
-    text-align:center;
-    padding:50px 20px;
-    color:#aaa;
 }
 
 /* WHATSAPP */
@@ -122,19 +117,21 @@ footer {
     font-size:22px;
 }
 
-/* ANIMATION */
-.fade {
-    animation:fadeIn 1.5s;
-}
-
-@keyframes fadeIn {
-    from {opacity:0; transform:translateY(20px);}
-    to {opacity:1; transform:translateY(0);}
+/* TITOLI */
+h2 {
+    text-align:center;
 }
 </style>
 </head>
 
 <body>
+
+<!-- VIDEO -->
+<video autoplay muted loop class="video-bg">
+    <source src="video.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
 
 <!-- LANGUAGE -->
 <div class="lang">
@@ -143,7 +140,7 @@ footer {
 </div>
 
 <!-- HERO -->
-<div class="hero fade">
+<div class="hero">
 
     <img src="logo.PNG">
 
@@ -151,66 +148,61 @@ footer {
         📞 +39 0583 97 42 74<br>
         📧 office@slide-srl.com<br><br>
 
-        <strong id="commerciale">Commerciale</strong><br>
+        <strong id="sales">Commerciale</strong><br>
         Mirko: +39 334 1854092<br>
         Alessandro: +39 345 240 0638
     </div>
 
 </div>
 
-<!-- CHI SIAMO -->
-<section class="fade">
+<!-- ABOUT -->
+<section>
     <h2 id="about-title">CHI SIAMO</h2>
     <p id="about-text" style="text-align:center;">
-    BLU SRL è il partner di riferimento per la fornitura di teak di alta qualità destinato al settore nautico.
+    BLU SRL è il partner di riferimento per la fornitura di teak di alta qualità per il settore nautico.
     </p>
 </section>
 
-<!-- PRODOTTI -->
-<section class="fade">
-    <h2 id="prodotti">I NOSTRI PRODOTTI</h2>
+<!-- PRODUCTS -->
+<section>
+    <h2 id="prod">I NOSTRI PRODOTTI</h2>
 
     <div class="grid">
 
         <div class="card">
             <img src="dettaglio.JPG">
-            <h3 id="p1">Tavolame in Teak</h3>
-            <p id="p1t">Legno selezionato - Alta resistenza</p>
+            <h3 id="p1">Tavolame</h3>
+            <p id="p1t">Alta qualità</p>
         </div>
 
         <div class="card">
             <img src="yacht.PNG">
-            <h3 id="p2">Doghe in Teak</h3>
-            <p id="p2t">Decking nautico - Finitura precisa</p>
+            <h3 id="p2">Doghe</h3>
+            <p id="p2t">Decking nautico</p>
         </div>
 
         <div class="card">
             <img src="tronchi.PNG">
             <h3 id="p3">Materia Prima</h3>
-            <p id="p3t">Selezione all’origine - Qualità garantita</p>
+            <p id="p3t">Selezione origine</p>
         </div>
 
     </div>
-
 </section>
 
-<!-- CERTIFICAZIONI -->
-<section class="fade">
-    <h2 id="cert">PRODOTTO CERTIFICATO</h2>
+<!-- CERT -->
+<section>
+    <h2 id="cert">CERTIFICAZIONI</h2>
     <p id="certt" style="text-align:center;">
-    FSC - EUDR | Gestione sostenibile | Prodotto eco-friendly
+    FSC - EUDR | Sustainable teak
     </p>
 </section>
 
 <!-- FOOTER -->
-<footer>
-
-    <p>
+<section style="text-align:center;">
     Via Pesciatina 878B - Gragnano (LU)<br>
     Via Don E. Angeli 181 - Segromigno (LU)
-    </p>
-
-</footer>
+</section>
 
 <!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/393341854092">💬</a>
@@ -223,20 +215,20 @@ if(lang=="en"){
 document.getElementById("about-title").innerText="ABOUT US";
 document.getElementById("about-text").innerText="BLU SRL is a leading supplier of high-quality teak for the nautical sector.";
 
-document.getElementById("prodotti").innerText="OUR PRODUCTS";
+document.getElementById("prod").innerText="OUR PRODUCTS";
 document.getElementById("p1").innerText="Teak Timber";
-document.getElementById("p1t").innerText="Selected wood - High resistance";
+document.getElementById("p1t").innerText="High quality wood";
 
 document.getElementById("p2").innerText="Teak Decking";
-document.getElementById("p2t").innerText="Marine decking - Precision finish";
+document.getElementById("p2t").innerText="Marine decking";
 
 document.getElementById("p3").innerText="Raw Material";
-document.getElementById("p3t").innerText="Origin selection - Guaranteed quality";
+document.getElementById("p3t").innerText="Origin selection";
 
-document.getElementById("cert").innerText="CERTIFIED PRODUCT";
-document.getElementById("certt").innerText="FSC - EUDR | Sustainable and eco-friendly";
+document.getElementById("cert").innerText="CERTIFICATIONS";
+document.getElementById("certt").innerText="FSC - EUDR certified teak";
 
-document.getElementById("commerciale").innerText="Sales";
+document.getElementById("sales").innerText="Sales";
 }
 
 if(lang=="it"){
